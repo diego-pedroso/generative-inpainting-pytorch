@@ -35,7 +35,7 @@ parser.add_argument('--seed', type=int, help='manual seed')
 # parser.add_argument('--output', type=str, default='output.png')
 parser.add_argument('--input_folder', type=valid_file)
 parser.add_argument('--mask_folder', type=str)
-parser.add_argument('--output_folder', type=str')
+parser.add_argument('--output_folder', type=str)
 
 parser.add_argument('--flow', type=str, default='')
 parser.add_argument('--checkpoint_path', type=str, default='')
@@ -75,7 +75,7 @@ def main():
 
         img_path = str(img)
         mask_path = '{}/{}.png'.format(args.mask_folder, img.stem)
-        output_path = '{}/{}.png'.format(output_path_folder, img.stem)
+        output_path = '{}/{}.png'.format(args.output_folder, img.stem)
         
         try:  # for unexpected error logging
             with torch.no_grad():   # enter no grad context
